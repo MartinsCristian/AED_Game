@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6179172915096198136}
   - component: {fileID: 3315681979763998376}
-  - component: {fileID: 3189873162321896214}
+  - component: {fileID: 8416042733021518928}
   m_Layer: 0
   m_Name: Guerreiro2
   m_TagString: Untagged
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3189873162321896214
+--- !u!114 &8416042733021518928
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3522266818104663396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48a7febae569bde42b7336faf170cdf7, type: 3}
+  m_Script: {fileID: 11500000, guid: 760fcc6add8055fcc807ae2d7b6d33bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Guerreiro2
