@@ -127,7 +127,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Guerreiro1
-  unitLevel: 3
-  damage: 10
-  maxHP: 50
-  currentHP: 50
+  damage: 0.1
+  maxHP: 1
+  currentHP: 1
