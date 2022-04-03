@@ -109,7 +109,7 @@ public class SistemaDeBatalha : MonoBehaviour
 
 	// procedimento que é chamado quando é o turno do jogador
 	void TurnoJogador() {
-		textoDeDialogo.text = "Choose an action:";
+		textoDeDialogo.text = "Escolha uma ação:";
 	}
 
 	// método chamado quando o botão de cura é acionado
