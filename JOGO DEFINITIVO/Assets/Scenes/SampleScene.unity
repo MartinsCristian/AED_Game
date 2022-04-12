@@ -305,57 +305,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &277669375
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 277669377}
-  - component: {fileID: 277669376}
-  m_Layer: 0
-  m_Name: BattleSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &277669376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277669375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ab85d0e11a9a31e3a4012869b01e63e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 7221560832859572336, guid: 8c5d12f685fe36e0f8d441f2d25edb4b, type: 3}
-  enemyPrefab: {fileID: 4215487488589662848, guid: f1446b1f95e112a39a30848d409ae9f3, type: 3}
-  playerBattleStation: {fileID: 1867011609}
-  enemyBattleStation: {fileID: 630989731}
-  dialogueText: {fileID: 1452254418}
-  playerHUD: {fileID: 1616748826}
-  enemyHUD: {fileID: 1913645517}
-  state: 0
---- !u!4 &277669377
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277669375}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4471163, y: 0.16538623, z: -0.36257234}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &323242561
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,6 +463,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &611955703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 611955705}
+  - component: {fileID: 611955704}
+  m_Layer: 0
+  m_Name: Inicializador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &611955704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611955703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fade23d30c5903a59aa171246baa5203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p1: {fileID: 7221560832859572336, guid: 8c5d12f685fe36e0f8d441f2d25edb4b, type: 3}
+  p2: {fileID: 4215487488589662848, guid: f1446b1f95e112a39a30848d409ae9f3, type: 3}
+  f: {fileID: 760598456389433121, guid: 520c36d7eff271b54a604436a9317703, type: 3}
+--- !u!4 &611955705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611955703}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.020131394, y: -2.2564125, z: -0.05394068}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &630939307
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +573,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &630989730
 GameObject:
@@ -609,7 +604,7 @@ Transform:
   m_Children:
   - {fileID: 1146767309}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &644033123
 GameObject:
@@ -848,12 +843,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923251238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2153, y: -3.3588, z: 0}
+  m_LocalPosition: {x: 0.2153, y: -3, z: 0}
   m_LocalScale: {x: 10.583415, y: 2.2175999, z: 1}
   m_Children:
   - {fileID: 1274068475}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &973276458
 GameObject:
@@ -1086,10 +1081,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 500, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1201,9 +1196,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 277669376}
-        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: OnAttackButton
+      - m_Target: {fileID: 2134847848}
+        m_TargetAssemblyTypeName: SistemaDeBatalha, Assembly-CSharp
+        m_MethodName: ClicouBotaoAtacar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1514,7 +1509,7 @@ Transform:
   - {fileID: 1750554115}
   - {fileID: 1420328007}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1616748826
 MonoBehaviour:
@@ -1525,11 +1520,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1616748823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b47bf8b6f4f244214a3b556294eec586, type: 3}
+  m_Script: {fileID: 11500000, guid: 48a90b6700dbb14efa871e458b317c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 918449489}
-  HealthBar: {fileID: 323242563}
+  nome: {fileID: 918449489}
+  barraDeVida: {fileID: 323242563}
 --- !u!1 &1678350033
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,7 +1911,7 @@ Transform:
   m_Children:
   - {fileID: 89477893}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1883492666
 GameObject:
@@ -2082,9 +2077,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 277669376}
-        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: OnHealButton
+      - m_Target: {fileID: 2134847848}
+        m_TargetAssemblyTypeName: SistemaDeBatalha, Assembly-CSharp
+        m_MethodName: ClicouBotaoCurar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2159,11 +2154,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1913645516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b47bf8b6f4f244214a3b556294eec586, type: 3}
+  m_Script: {fileID: 11500000, guid: 48a90b6700dbb14efa871e458b317c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 973276459}
-  HealthBar: {fileID: 1678350035}
+  nome: {fileID: 973276459}
+  barraDeVida: {fileID: 1678350035}
 --- !u!212 &1913645518
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2230,7 +2225,7 @@ Transform:
   - {fileID: 644033124}
   - {fileID: 117281606}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1918577903
 GameObject:
@@ -2313,3 +2308,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918577903}
   m_CullTransparentMesh: 1
+--- !u!1 &2134847847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2134847849}
+  - component: {fileID: 2134847848}
+  m_Layer: 0
+  m_Name: SistemaDeBatalha
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2134847848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134847847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcfb3bfbeb7536079dcf9cc6ac32852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabJogador: {fileID: 7221560832859572336, guid: 8c5d12f685fe36e0f8d441f2d25edb4b, type: 3}
+  prefabInimigo: {fileID: 4215487488589662848, guid: f1446b1f95e112a39a30848d409ae9f3, type: 3}
+  estacaoBatalhaJogador: {fileID: 1867011609}
+  estacaoBatalhaInimigo: {fileID: 630989731}
+  textoDeDialogo: {fileID: 1452254418}
+  HUDJogador: {fileID: 1616748826}
+  HUDInimigo: {fileID: 1913645517}
+  fila: {fileID: 3449039560802790801, guid: 520c36d7eff271b54a604436a9317703, type: 3}
+  estado: 0
+--- !u!4 &2134847849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134847847}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.020131394, y: -2.2564125, z: -0.05394068}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

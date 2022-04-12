@@ -38,7 +38,7 @@ public class BattleSystem : MonoBehaviour
 		GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
 		enemyUnit = enemyGO.GetComponent<Unit>();
 
-		dialogueText.text = "A wild " + enemyUnit.unitName + " approaches...";
+		dialogueText.text = "Um bravo " + enemyUnit.unitName + " se aproxima...";
 
 		playerHUD.SetHUD(playerUnit);
 		enemyHUD.SetHUD(enemyUnit);
@@ -54,7 +54,7 @@ public class BattleSystem : MonoBehaviour
 		bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
 
 		enemyHUD.SetHP(enemyUnit);
-		dialogueText.text = "The attack is successful!";
+		dialogueText.text = "O ataque foi efetuado!";
 
 		yield return new WaitForSeconds(2f);
 
@@ -71,7 +71,7 @@ public class BattleSystem : MonoBehaviour
 
 	IEnumerator EnemyTurn()
 	{
-		dialogueText.text = enemyUnit.unitName + " attacks!";
+		dialogueText.text = enemyUnit.unitName + " ataca!";
 
 		yield return new WaitForSeconds(1f);
 
@@ -97,16 +97,16 @@ public class BattleSystem : MonoBehaviour
 	{
 		if(state == BattleState.WON)
 		{
-			dialogueText.text = "You won the battle!";
+			dialogueText.text = "Você ganhou a batalha!";
 		} else if (state == BattleState.LOST)
 		{
-			dialogueText.text = "You were defeated.";
+			dialogueText.text = "Você foi derrotado.";
 		}
 	}
 
 	void PlayerTurn()
 	{
-		dialogueText.text = "Choose an action:";
+		dialogueText.text = "Escolha uma ação:";
 	}
 
 	IEnumerator PlayerHeal()

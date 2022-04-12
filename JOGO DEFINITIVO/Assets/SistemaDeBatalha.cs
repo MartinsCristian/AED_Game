@@ -29,6 +29,8 @@ public class SistemaDeBatalha : MonoBehaviour
 	public HUDDeBatalha HUDJogador; // variável que armazena o HUD do jogador
 	public HUDDeBatalha HUDInimigo; // variável que armazena o HUD do inimigo
 
+	public FilaDeJogadores fila;
+
 	public EstadoDeBatalha estado; // variável que armazena o estado da batalha
 
     // Start é chamado antes de tudo
@@ -52,14 +54,26 @@ public class SistemaDeBatalha : MonoBehaviour
 
 		yield return new WaitForSeconds(2f); // espera um tempo
 
-		estado = EstadoDeBatalha.TURNOJOGADOR; // se torna a vez do jogador
-		TurnoJogador(); // chama o método do turno do jogador
+		if (fila.getHeader().player.nomeDaUnidade == "Guerreiro1") {
+			estado = EstadoDeBatalha.TURNOJOGADOR; // se torna a vez do jogador
+			TurnoJogador(); // chama o método do turno do jogador
+		} else {
+			estado = EstadoDeBatalha.TURNOINIMIGO; // se torna a vez do inimigo
+			TurnoInimigo(); // chama o método do turno do inimigo
+		}
+	}
+
+	public bool Atacar() {
+		textoDeDialogo.text = fila.getHeader().player.nomeDaUnidade + " ataca!";
+
+		yield return new WaitForSeconds(1f); // espera um tempo
+
+		return fila.getHeader().next.player.TomarDano(fila.getHeader().player.dano);
 	}
 
 	// método que é chamado quando o jogador ataca
 	IEnumerator JogadorAtaca() {
-		// variável que armazena o retorno do método que faz a unidade tomar dano (perder vida)
-		bool estaMorto = unidadeInimigo.TomarDano(unidadeJogador.dano);
+		bool estaMorto = Atacar();
 
 		HUDInimigo.SetVida(unidadeInimigo); // seta a vida do inimigo no HUD
 		textoDeDialogo.text = "O ataque foi efetuado!";
@@ -77,12 +91,7 @@ public class SistemaDeBatalha : MonoBehaviour
 
 	// metodo que é chamado quando é a vez do inimigo
 	IEnumerator TurnoInimigo() {
-		textoDeDialogo.text = unidadeInimigo.nomeDaUnidade + " ataca!";
-
-		yield return new WaitForSeconds(1f); // espera um tempo
-
-		// variável que armazena o retorno do método que faz a unidade tomar dano (perder vida)
-		bool estaMorto = unidadeJogador.TomarDano(unidadeInimigo.dano);
+		bool estaMorto = Atacar();
 
 		HUDJogador.SetVida(unidadeJogador); // seta a vida do jogador no HUD
 
