@@ -29,14 +29,19 @@ public class FilaDeJogadores : MonoBehaviour
             current.next = adicionar;
         }
     }
-    public void remove(Unidade newPlayer) {
+    public void remove() {
         if (header != null) {
+            this.insere(header.player);
             header = header.next;
         }
     }
 
     public JogadorAbstrato getHeader() {
-        return header;
+        return this.header;
+    }
+
+    public Unidade getPlayer() {
+        return this.header.player;
     }
 
 /*

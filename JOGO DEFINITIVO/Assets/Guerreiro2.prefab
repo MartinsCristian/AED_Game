@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9591b3fd884eafb649ee2d173038df61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeDaUnidade: Inimigo
+  nomeDaUnidade: Guerreiro2
   dano: 10
   vidaMaxima: 50
   vidaAtual: 50
